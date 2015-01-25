@@ -1,0 +1,21 @@
+<koken:include file="inc/components/header.html" />
+    <koken:load>
+      <ol class="grid">
+        <koken:loop>
+          <li>
+            <koken:link>
+              <koken:img crop="true"/>
+            </koken:link>
+          </li>
+        </koken:loop>
+      </ol>
+    <koken:else>
+      <koken:note>
+        No images or videos found
+      </koken:note>
+    </koken:load>
+    <footer>
+      {{ site.copyright }}
+    </footer>
+  </body>
+</html>

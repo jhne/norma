@@ -1,0 +1,25 @@
+<koken:include file="inc/components/header.html" />
+<main role="main">
+  <koken:load>
+    <ul class="grid">
+      <koken:loop>
+        <li>
+          <koken:link>
+              <koken:img crop="adaptive" />
+              <div>
+                <h3>{{ album.title }} </h3>
+                <p>dsdsadsa</p>
+              </div>
+          </koken:link>
+        </li>
+      </koken:loop>
+    </ul>
+  <koken:else>
+    <koken:note>
+      No public albums found 
+    </koken:note>
+  </koken:load>
+</main>
+<koken:include file="inc/components/footer.html" />
+</body>
+</html>

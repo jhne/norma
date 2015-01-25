@@ -1,0 +1,17 @@
+<koken:include file="inc/components/header.html" />
+<koken:load limit="50">
+	<koken:loop>
+		<koken:content_image>
+			<koken:link title="View {{ content.title | content.filename }}">
+				<koken:img />
+			</koken:link>
+		</koken:content_image>
+		<koken:content_video>
+			<koken:video />
+		</koken:content_video>
+	</koken:loop>
+	<koken:else>
+		<koken:note>
+			This page displays favorites. Mark individual images/videos as favorites in the Library.
+		</koken:note>
+</koken:load>

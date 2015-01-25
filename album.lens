@@ -1,0 +1,45 @@
+<koken:include file="inc/components/header.html" />
+<koken:load>
+	<article class="top-section">
+    <p class="time"><koken:time />
+      <koken:categories>
+      <span class="categories"> /  In
+      <koken:loop separator=", ">
+        <koken:link>
+          {{ category.title }}
+        </koken:link>
+      </koken:loop>
+      </span>
+    </koken:categories>
+
+    <koken:tags>
+    <span class="tags"> /  Tagged 
+      <koken:loop separator=", ">
+        <koken:link>
+          {{ tag.title }}
+        </koken:link>
+      </koken:loop>
+      </span>
+    </koken:tags>
+    </p>
+	  <p class="album-name">{{ album.title }} </p> 
+	  <p class="album-desc">{{ album.description }} </p>
+	 </article>
+  <ul class="grid">
+    <koken:loop>
+      <li>
+        <koken:link lightbox="true">
+          <koken:img crop="adaptive"/>
+        </koken:link>
+      </li>
+    </koken:loop>
+  </ul>
+  <koken:include file="inc/components/share.html" />
+<koken:else>
+  <koken:note>
+    No album data found 
+  </koken:note>
+</koken:load>
+<koken:include file="inc/components/footer.html" />
+</body>
+</html>

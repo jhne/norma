@@ -1,0 +1,25 @@
+<koken:include file="inc/components/header.html" />
+<div class="page-content">
+<koken:load>
+  <koken:featured_image>
+    <koken:link>
+     <koken:img size="3:1"/>
+    </koken:link>
+  </koken:featured_image>
+  <article class="entry">
+    <p class="essay-time"><koken:time /></p>
+    <h2 class="page-name"> 
+      {{ essay.title }} 
+    </h2> 
+    {{ essay.content paragraphs="true" }} 
+  </article>
+<koken:include file="inc/components/share.html" />
+<koken:else>
+  <koken:note>
+    No published essay found 
+  </koken:note>
+</koken:load>
+</div>
+<koken:include file="inc/components/footer.html" />
+</body>
+</html>

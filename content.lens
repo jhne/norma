@@ -1,0 +1,27 @@
+<koken:include file="inc/components/header.html" />
+<koken:load>
+  <koken:content_image>
+    <koken:img />
+  </koken:content_image>
+  <koken:content_video>
+    <koken:video />
+  </koken:content_video>
+  {{ content.caption paragraphs="true" }} 
+    <koken:exif>
+      <div class="exif">
+        <p><koken:not empty="exif.model">{{ exif.model }}</koken:not> -
+        <koken:not empty="exif.exposure">{{ exif.exposure }}</koken:not> -
+        <koken:not empty="exif.aperture">{{ exif.aperture }}</koken:not> -
+        <koken:not empty="exif.focal_length">{{ exif.focal_length }}</koken:not> -
+        <koken:not empty="exif.lens">{{ exif.lens }}</koken:not></p>
+      </div>
+    </koken:exif>
+    <koken:include file="inc/components/share.html" />
+<koken:else>
+  <koken:note>
+    No image or video found 
+  </koken:note>
+</koken:load>
+<koken:include file="inc/components/footer.html" />
+</body>
+</html>

@@ -1,0 +1,19 @@
+<koken:include file="inc/components/header.html" />
+    <koken:load source="featured_albums">
+      <div id="slideshow">
+        <koken:pulse autostart="true" width="100%" height="100%" crop="fill" jsvar="pulse" loop="true" source="featured_albums" next=".sldshw-arrow-right" previous=".sldshw-arrow-left" link_to="album" />
+          <ul id="slideshow_nav">
+            <li><a href="#" class="sldshw-arrow-left" data-bind-to-key="left">&#8592;</a></li>
+            <li><a href="#" class="sldshw-arrow-right" data-bind-to-key="right">&#8594;</a></li>
+            <koken:load source="featured_albums"><li class="amount-check">{{ count }}</li></koken:load>
+          </ul>
+    </koken:load>
+    <script>
+      pulse.on( 'transitionstart', function(e) {
+        var data = e.data.parent;
+        $('.pulse-album-name').html(data.title);
+        $('.pulse-album-desc').html(data.summary);
+      });
+    </script>
+  </body>
+</html>

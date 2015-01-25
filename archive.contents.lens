@@ -1,0 +1,36 @@
+<koken:include file="inc/components/header.html" />
+<div class="page-content">
+<koken:load limit="{{ settings.content_index_limit }}">
+
+<header class="content">
+
+	<span class="wrap first">
+
+		<koken:breadcrumbs separator="/" />
+
+	</span>
+
+</header>
+
+<ol class="thumbs">
+
+	<koken:loop>
+		<koken:include file="layouts/content_list_item.html" />
+	</koken:loop>
+
+</ol>
+
+<koken:include file="layouts/pagination.html" />
+
+<koken:else>
+
+	<koken:note>
+
+		No content found. Upload some in the Library.
+
+	</koken:note>
+
+</koken:load>
+</div>
+
+<koken:include file="layouts/footer.html" />

@@ -1,0 +1,25 @@
+<koken:include file="inc/components/header.html" />
+<div class="page-content">
+  <koken:load>
+      <koken:loop>
+          <article class="entry">
+          <p class="essay-time">
+            <koken:time />
+          </p>
+            <koken:link>
+            <h2> 
+              {{ essay.title }} 
+            </h2>
+            </koken:link>
+            {{ essay.content paragraphs="true" }}
+          </article>
+      </koken:loop>
+  <koken:else>
+    <koken:note>
+      No published essays found 
+    </koken:note>
+  </koken:load>
+</div>
+<koken:include file="inc/components/footer.html" />
+</body>
+</html>

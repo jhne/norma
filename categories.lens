@@ -1,0 +1,20 @@
+<koken:include file="inc/components/header.html" />
+<article class="top-section">
+	<h1 class="page-name">Browse by categories...</h1>
+</article>
+<koken:load>
+	<ul class="grid">
+    	<koken:loop>
+    		<koken:link title="View everything in {{ category.title }}">
+		      	<li class="tag-bg">
+		      		<koken:load source="category" filter:tags="{{ tag.title }}">
+		   				<koken:img crop="adaptive"/>
+		   			</koken:load>
+					<span class="tag">{{ category.counts.total }}x {{ category.title }}</span>
+		      	</li>
+	      	</koken:link>
+    	</koken:loop>
+  	</ul>
+<koken:else>
+	No tags found.
+</koken:load>

@@ -1,0 +1,5 @@
+<koken:include file="inc/components/header.html" />
+
+Error: {{ routed_variables.code }}
+
+<koken:include file="inc/components/footer.html" />
