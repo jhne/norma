@@ -1,22 +1,21 @@
 <koken:include file="inc/components/header.html" />
 <koken:load>
   <article class="top-section">
-  <h1 class="page-name">Browsing {{ tag.title }}</h1>
-   </article>
-  <ul class="grid">
-    <koken:loop>
-      <li>
-        <koken:link lightbox="true">
-          <koken:img crop="adaptive"/>
-        </koken:link>
-      </li>
-    </koken:loop>
-  </ul>
-  <koken:include file="inc/components/share.html" />
-<koken:else>
-  <koken:note>
-    No album data found 
-  </koken:note>
+    <h1 class="page-name">Browsing {{ tag.title }}</h1>
+  </article>
+    <ul class="grid">
+      <koken:loop>
+        <li>
+          <koken:link>
+            <koken:img crop="adaptive"/>
+          </koken:link>
+        </li>
+      </koken:loop>
+    </ul>
+  <koken:else>
+    <koken:note>
+      No album data found 
+    </koken:note>
 </koken:load>
 </body>
 </html>
