@@ -3,3 +3,6 @@ Norma is a Koken theme for writers, photographers, and digital artists. Anyone w
 
 #Installation
 Just copy the folder to your themes directory in the storage folder. Mkay?
+
+#Beta
+This is nowhere near done, but usable. Changes will be done!
