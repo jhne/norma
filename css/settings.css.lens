@@ -178,7 +178,9 @@ nav .k-nav-current {
 	-webkit-transition:1s all ease;
 }
 
-.k-lens-album .grid li a img:hover, .k-lens-contents .grid li a img:hover {
+.k-lens-album .grid li a img:hover, 
+.k-lens-contents .grid li a img:hover, 
+.k-lens-favorites .grid li a img:hover {
 	z-index:7;
 	transform:scale(1.05,1.05);
 	-webkit-transform:scale(1.05,1.05);
@@ -251,7 +253,9 @@ nav .k-nav-current {
 	background:#fff;
 }
 
-.k-lens-index .show, .k-lens-albums .show, .k-lens-contents .show, 
+.k-lens-index .show, 
+.k-lens-albums .show, 
+.k-lens-contents .show, 
 .k-lens-sets .show {
 	border-color:#f0f0f0;
 	background:#fff;
@@ -265,22 +269,27 @@ nav .k-nav-current {
 	border-color:#333;
 }
 
-.k-lens-index nav a, .k-lens-albums nav a, .k-lens-contents nav a, 
+.k-lens-index nav a, .k-lens-albums nav a, 
+.k-lens-contents nav a, 
 .k-lens-sets nav a {
 	background:#fff;
 	color:#000;
 	border-color:#f0f0f0;
 }
 
-.k-lens-index nav a:hover, .k-lens-albums nav a:hover, 
-.k-lens-contents nav a:hover, .k-lens-sets nav a:hover {
+.k-lens-index nav a:hover, 
+.k-lens-albums nav a:hover, 
+.k-lens-contents nav a:hover, 
+.k-lens-sets nav a:hover {
 	background:#000;
 	color:#fff;
 	border-color:#333;
 }
 
-.k-lens-index nav .k-nav-current, .k-lens-albums nav .k-nav-current, 
-.k-lens-contents nav .k-nav-current, .k-lens-sets nav .k-nav-current {
+.k-lens-index nav .k-nav-current, 
+.k-lens-albums nav .k-nav-current, 
+.k-lens-contents nav .k-nav-current, 
+.k-lens-sets nav .k-nav-current {
 	background:#000;
 	color:#fff;
 	border-color:#000;
