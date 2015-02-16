@@ -4,14 +4,22 @@ $(document).ready(function() {
 		return false;
 	});
 
-	$('.show').click(function () {
-		$('nav li a').not('.k-nav-current').toggle();
-		$('.show').toggleClass('show-toggled');
-		return false
-	});
-
 	var albumCount = $('.amount-check').html();
 	if (albumCount === '1') {
 		$('#slideshow_nav').hide();
 	};
+
+	$("#hoverpoint").mouseenter(function() {
+		var main = $('main');
+		var area = $('#hoverpoint')
+		if (!main.hasClass('offset')) {
+	      main.addClass('offset');
+	      area.addClass('offset');
+    	}
+	});
+
+	$("main").mouseenter(function() {
+		$('main').removeClass('offset');
+		$('#hoverpoint').removeClass('offset');
+	});
 });

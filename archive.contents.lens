@@ -1,4 +1,5 @@
 <koken:include file="inc/components/header.html" />
+<main role="main">
 <div class="page-content">
 <koken:load limit="{{ settings.content_index_limit }}">
 
@@ -32,5 +33,6 @@
 
 </koken:load>
 </div>
+</main>
 
 <koken:include file="layouts/footer.html" />

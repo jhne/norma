@@ -1,4 +1,5 @@
 <koken:include file="inc/components/header.html" />
+<main role="main">
 <koken:load>
   <koken:content_image>
     <koken:img />
@@ -22,6 +23,7 @@
     No image or video found 
   </koken:note>
 </koken:load>
+</main>
 <koken:include file="inc/components/footer.html" />
 </body>
 </html>

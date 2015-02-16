@@ -1,4 +1,5 @@
 <koken:include file="inc/components/header.html" />
+<main role="main">
 <koken:load>
 	<article class="top-section">
     <p class="time"><koken:time />
@@ -40,6 +41,7 @@
     No album data found 
   </koken:note>
 </koken:load>
+</main>
 <koken:include file="inc/components/footer.html" />
 </body>
 </html>

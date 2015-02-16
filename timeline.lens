@@ -1,4 +1,5 @@
 <koken:include file="inc/components/header.html" />
+<main role="main">
 <div class="page-content">
 <koken:load>
   <ol class="list">
@@ -74,5 +75,6 @@
   </koken:note>
 </koken:load>
 </div>
+</main>
 </body>
 </html>

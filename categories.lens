@@ -1,4 +1,5 @@
 <koken:include file="inc/components/header.html" />
+<main role="main">
 <article class="top-section">
 	<h1 class="page-name">Browse by categories...</h1>
 </article>
@@ -18,3 +19,4 @@
 <koken:else>
 	No tags found.
 </koken:load>
+</main>

@@ -1,4 +1,5 @@
 <koken:include file="inc/components/header.html" />
+<main role="main">
 <div class="page-content">
 <koken:load>
   <koken:featured_image>
@@ -20,6 +21,7 @@
   </koken:note>
 </koken:load>
 </div>
+</main>
 <koken:include file="inc/components/footer.html" />
 </body>
 </html>
