@@ -6,3 +6,4 @@ Just copy the folder to your themes directory in the storage folder. Mkay?
 
 #Beta
 This is nowhere near done, but usable. Changes will be done!
+Also, the experimental holds a version with an alternative sidebar navigation as for now.
