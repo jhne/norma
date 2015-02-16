@@ -306,7 +306,8 @@ nav .k-nav-current {
 	padding:20px;
 }
 
-.sldshw-arrow-left, .sldshw-arrow-right {
+.sldshw-arrow-left, 
+.sldshw-arrow-right {
 	background:#fff;
 	color:#000;
 	box-sizing:border-box;
@@ -322,7 +323,8 @@ nav .k-nav-current {
 	border-right:1px solid #ddd;
 }
 
-.sldshw-arrow-left:hover, .sldshw-arrow-right:hover {
+.sldshw-arrow-left:hover, 
+.sldshw-arrow-right:hover {
 	background:#000;
 	border:none;
 	color:#fff;
@@ -366,7 +368,8 @@ footer {
 	font-family: 'Merriweather', serif;
 }
 
-.entry blockquote:before, .entry blockquote:after {
+.entry blockquote:before, 
+.entry blockquote:after {
 	content:'"';
 }
 
@@ -385,9 +388,9 @@ footer {
 
 .k-lens-essay .entry:after {
 	content:'';
-	background:#bbb;
+	background:#e0e0e0;
 	width:100px;
-	height:1px;
+	height:2px;
 	position:absolute;
 	left:50%;
 	margin-left:-50px;
@@ -418,7 +421,6 @@ footer {
 }
 
 .entry img {
-	margin:70px 0 70px 0;
 }
 
 .page-content {
@@ -427,17 +429,23 @@ footer {
 	margin:0 auto;
 }
 
-.k-lens-essay .page-content, .k-lens-tags .page-content {
+.k-lens-essay .page-content, 
+.k-lens-tags .page-content {
 	padding-top:0;
 }
 
-.k-lens-page .page-content p, .k-lens-page .page-content h1 {
+.k-lens-page .page-content p, 
+.k-lens-page .page-content h1 {
 	max-width:750px;
 	margin:0 auto;
 	padding:0 20px 0 20px;
 }
 
-.entry h2, .album-name, .exif h1, .page-name, .list h3 {
+.entry h2, 
+.album-name, 
+.exif h1, 
+.page-name, 
+.list h3 {
 	font-size:2.5em;
 	text-transform:uppercase;
 	font-weight:700;
@@ -447,12 +455,15 @@ footer {
 	line-height:1.5em;
 }
 
-.k-lens-essays h2, .k-lens-essay h2, .list h2 {
+.k-lens-essays h2, 
+.k-lens-essay h2, 
+.list h2 {
 	text-transform:capitalize;
 	letter-spacing:0;
 }
 
-.entry time, .time, .essay-time, time {
+.entry time, .time, 
+.essay-time, time {
 	font-weight:600;
 	text-transform:uppercase;
 	color:#aaa;
@@ -461,7 +472,26 @@ footer {
 	font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
 }
 
-.k-lens-album .time, .k-lens-set .time {
+.entry .k-content-embed {
+	margin-top:-50px;
+	margin:70px 0 70px 0;
+}
+
+.k-content-text .k-content-title, 
+.entry .k-content-text .k-content-caption {
+	clear:both;
+	width:100%;
+	margin: 0 auto;
+	display:block;
+	text-align:center;
+	color:#ccc;
+	font-family: 'Merriweather', serif;
+	font-size:.8em;
+	padding-top:10px;
+}
+
+.k-lens-album .time, 
+.k-lens-set .time {
 	padding-bottom:10px;
 	text-align:center;
 }
@@ -475,7 +505,11 @@ footer {
 	border-bottom:2px solid #ccc;
 }
 
-.album-desc, .entry p, .main-p, .exif p, .list p {
+.album-desc, 
+.entry p, 
+.main-p, 
+.exif p, 
+.list p {
 	line-height:1.7em;
 	font-size:1.17em;
 	letter-spacing:0.01rem;
