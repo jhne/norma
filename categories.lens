@@ -1,6 +1,6 @@
 <koken:include file="inc/components/header.html" />
 <article class="top-section">
-	<h1 class="page-name">Browse by categories...</h1>
+	<h1 class="page-name">Browse by category...</h1>
 </article>
 <koken:load>
 	<ul class="grid">
