@@ -1,7 +1,6 @@
 <koken:include file="inc/components/header.html" />
-<main role="main">
   <koken:load>
- <article class="album-details">
+    <article class="top-section">
     <p class="time"><koken:time />
       <koken:categories>
       <span class="categories"> /  In
@@ -43,8 +42,8 @@
     <koken:note>
       No public albums found 
     </koken:note>
+    </div>
   </koken:load>
-</main>
 <koken:include file="inc/components/footer.html" />
 </body>
 </html>

@@ -8,7 +8,7 @@
     		<koken:link title="View everything in {{ category.title }}">
 		      	<li class="tag-bg">
 		      		<koken:load source="category" filter:tags="{{ tag.title }}">
-		   				<koken:img crop="adaptive"/>
+						<koken:img crop="adaptive"/>
 		   			</koken:load>
 					<span class="tag">{{ category.counts.total }}x {{ category.title }}</span>
 		      	</li>
