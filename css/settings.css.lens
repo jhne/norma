@@ -145,6 +145,11 @@ nav .k-nav-current {
 	background:#333;
 }
 
+.disquis {
+	max-width:720px;
+	margin:0 auto;
+}
+
 .grid {
     padding: 0;
     list-style: none;
