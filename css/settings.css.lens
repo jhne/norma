@@ -67,6 +67,12 @@ p a:hover {
 	margin:20px;
 }
 
+#logo {
+	position:absolute;
+	margin:20px;
+	z-index:99;
+}
+
 nav ul li {
 	display: inline;
 	list-style-type: none;
@@ -353,11 +359,11 @@ footer {
 
 .entry {
 	margin:0 auto;
-	margin-top:50px;
 	box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	-webkit-box-sizing:border-box;
 	border-bottom:1px solid #ddd;
+	padding:50px 0 50px 0;
 }
 
 .entry blockquote {
@@ -425,7 +431,8 @@ footer {
 	margin-bottom:-50px;
 }
 
-.entry img {
+.k-content {
+	text-align:center;
 }
 
 .page-content {

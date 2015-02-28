@@ -1,10 +1,42 @@
 {
-  "name": "Norma",
-  "version": "1.0",
-  "description": "A clutter-free theme for the photographers and writers. Crisp, fullbleed images and beautiful, legible typography with a minimalistic tone.",
-  "demo": "http://jhne.me/norma",
-  "author": {
-    "name": "John Elgenstierna",
-    "link": "http://jhne.me"
-  }
+	"name": "Norma",
+	"version": "1.0",
+	"description": "A clutter-free theme for the photographers and writers. Crisp, fullbleed images and beautiful, legible typography with a minimalistic tone.",
+	"demo": "http://jhne.me/norma",
+ 	"author": {
+	    "name": "John Elgenstierna",
+		"link": "http://jhne.me/"
+	},
+
+	"settings": {
+		"Site title": {
+			"icon":"type",
+			"settings": {
+				"site_title_type": {
+					"label": "Type",
+					"type": "select",
+					"options": [
+						{ "label": "Text", "value": "text" },
+						{ "label": "Image", "value": "image" }
+					],
+					"value": "text"
+				},
+				
+				"site_title_img_url": {
+					"label": "Image URL",
+					"type": "string",
+					"value": "",
+					"dependencies": {
+	                    "evaluate": "all",
+	                    "conditions": [
+	                         {
+	                              "option": "site_title_type",
+	                              "equals": "image"
+	                         }
+	                    ]
+	               }
+				}
+			}
+		}
+	}
 }

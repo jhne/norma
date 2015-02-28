@@ -2,6 +2,11 @@
 <div class="page-content">
   <koken:load>
       <koken:loop>
+      <koken:featured_image>
+    <koken:link>
+     <koken:img size="3:1"/>
+    </koken:link>
+  </koken:featured_image>
           <article class="entry">
           <p class="essay-time">
             <koken:time />
@@ -11,7 +16,6 @@
               {{ essay.title }} 
             </h2>
             </koken:link>
-            {{ essay.content paragraphs="true" }}
           </article>
       </koken:loop>
   <koken:else>
