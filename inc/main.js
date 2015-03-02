@@ -14,4 +14,16 @@ $(document).ready(function() {
 	if (albumCount === '1') {
 		$('#slideshow_nav').hide();
 	};
+
+	function responsiveNav () {
+        if ($(window).width() <= 540){  
+            $('nav').addClass('mobile');
+            $('.show').addClass('mobileOpen');
+        }   
+    }
+    responsiveNav();
+
+    $('.mobileOpen').click(function () {
+    	$('nav.mobile ul').toggle();
+    });
 });

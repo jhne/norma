@@ -21,7 +21,7 @@
 					],
 					"value": "text"
 				},
-				
+
 				"site_title_img_url": {
 					"label": "Image URL",
 					"type": "string",

@@ -39,11 +39,11 @@
             <koken:content_video>
               <koken:video />
             </koken:content_video>
-            <h3>
+            <p>
               <koken:link>
                 {{ content.title | content.filename }}
               </koken:link>
-            </h3> 
+            </p> 
             <p>
               {{ content.caption }} 
             </p>
@@ -64,8 +64,9 @@
             </p>
           </koken:event_essay>
         </koken:event>
+        <div class="timeline-divider"></div>
       </li>
-      <div id="timeline-divider"></div>
+      
     </koken:loop>
   </ol>
 <koken:else>
