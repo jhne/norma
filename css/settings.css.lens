@@ -122,13 +122,13 @@ nav .k-nav-current {
 
 nav.mobile ul {
 	width:100%;
-	height:100%;
+	background:#000;
 	position:fixed;
 	top:0;
 	left:0;
 	margin:0;
 	padding:0;
-	margin-top:70px;
+	margin-top:90px;
 	display:none;
 }
 
@@ -142,15 +142,24 @@ nav.mobile ul li a {
 	border:0;
 	background:transparent;
 	color:#fff;
-	margin:20px;
+	margin:0;
 	padding:20px 20px 20px 20px;
 	background:#000;
 	text-align:center;
+	border-bottom:1px solid #222;
+}
+
+nav.mobile ul li a:hover {
+	background:#222;
 }
 
 nav.mobile .k-nav-current {
-	background:#333 !important;
+	background:#222 !important;
 	color:#fff !important;
+}
+
+.show.mobileOpen {
+	border:0;
 }
 
 .menu {
