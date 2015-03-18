@@ -1,9 +1,10 @@
 #Norma
 Norma is a Koken theme for writers, photographers, and digital artists. Anyone who wants to showcase their work clutter-free and clean.
 
-#Installation
-Just copy the folder to your themes directory in the storage folder. Mkay?
+[Here's a demo showcasing the theme.](https://jhne.me/demos/norma/)
 
-#Beta
-This is nowhere near done, but usable. Changes will be done!
-Also, the experimental holds a version with an alternative sidebar navigation as for now.
+#Installation
+Just copy the folder to your themes directory in the storage folder of your Koken installation. Mkay?
+
+#Release v1.0
+Norma will keep getting updates and fixes.
