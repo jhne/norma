@@ -1,4 +1,5 @@
 <koken:include file="inc/components/header.html" />
+<main role="main">
 <koken:load>
   <article class="top-section">
     <h1 class="page-name">Browsing {{ tag.title }}</h1>
@@ -17,5 +18,6 @@
       No album data found 
     </koken:note>
 </koken:load>
+</main>
 </body>
 </html>

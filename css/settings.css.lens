@@ -1,5 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,700,300);
-@import url(http://fonts.googleapis.com/css?family=Merriweather:400,300);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,300);
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400,300);
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, font, img, ins, kbd, q, s, 
 samp, small, strike, sub, sup, tt, var, dd, dl, dt, li, ol, ul, fieldset, form, label, 
@@ -173,13 +173,13 @@ nav.mobile .k-nav-current {
 	height:48px;
 	width:48px;
 	display:block;
-	float:right;
 	font-size:1.2em;
 	box-sizing:border-box;
 	padding:10px 15px 15px 15px;
 	border-left:1px solid #333;
 	background:#000;
 	color:#fff;
+	float:right;
 }
 
 .show-toggled {
@@ -407,6 +407,12 @@ footer {
 	-webkit-box-sizing:border-box;
 	border-bottom:1px solid #ddd;
 	padding:70px 0 70px 0;
+	font-family:'Merriweather', serif;
+}
+
+.entry p a {
+	font-family:'Merriweather', serif !important;
+	font-size:1em !important;
 }
 
 .entry blockquote {
@@ -454,6 +460,10 @@ footer {
 .social {
 	text-align:center;
 	padding:30px 20px 100px 20px;
+	clear:both;
+	display:block;
+	width:100%;
+	box-sizing:border-box;
 }
 
 .icon {
