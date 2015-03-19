@@ -11,7 +11,6 @@
       </koken:loop>
       </span>
     </koken:categories>
-
     <koken:tags>
     <span class="tags"> /  Tagged 
       <koken:loop separator=", ">
@@ -38,12 +37,12 @@
         </li>
       </koken:loop>
     </ul>
+    <koken:include file="inc/components/share.html" />
   <koken:else>
     <koken:note>
       No public albums found 
     </koken:note>
     </div>
   </koken:load>
-<koken:include file="inc/components/footer.html" />
 </body>
 </html>

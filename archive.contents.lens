@@ -1,36 +1,60 @@
 <koken:include file="inc/components/header.html" />
-<div class="page-content">
-<koken:load limit="{{ settings.content_index_limit }}">
-
-<header class="content">
-
-	<span class="wrap first">
-
-		<koken:breadcrumbs separator="/" />
-
-	</span>
-
-</header>
-
-<ol class="thumbs">
-
-	<koken:loop>
-		<koken:include file="layouts/content_list_item.html" />
-	</koken:loop>
-
-</ol>
-
-<koken:include file="layouts/pagination.html" />
-
+<koken:load>
+    <koken:if data="archive.type" equals="date">
+      <article class="top-section">
+      <p class="album-name">{{ archive.title }}</p> 
+      </article>
+      <ul class="grid">
+      <koken:loop>
+        <li>
+          <koken:link  title="View {{ album.title }}">
+              <koken:img crop="adaptive" />
+              <div>
+                <h3>{{ album.title }} </h3>
+              </div>
+          </koken:link>
+        </li>
+        </koken:loop>
+      </ul>
+    </koken:if>
+    <koken:if data="archive.type" equals="tag">
+      <article class="top-section">
+      <p class="album-name">{{ archive.type.singular }} #{{ archive.title }}</p> 
+      </article>
+      <ul class="grid">
+      <koken:loop>
+        <li>
+          <koken:link  title="View {{ album.title }}">
+              <koken:img crop="adaptive" />
+              <div>
+                <h3>{{ album.title }} </h3>
+              </div>
+          </koken:link>
+        </li>
+        </koken:loop>
+      </ul>
+    </koken:if> 
+    <koken:if data="archive.type" equals="category">
+      <article class="top-section">
+      <p class="album-name">{{ archive.type.singular }} {{ archive.title }}</p> 
+      </article>
+      <ul class="grid">
+      <koken:loop>
+        <li>
+          <koken:link  title="View {{ album.title }}">
+              <koken:img crop="adaptive" />
+              <div>
+                <h3>{{ album.title }} </h3>
+              </div>
+          </koken:link>
+        </li>
+        </koken:loop>
+      </ul>
+    </koken:if>
 <koken:else>
-
-	<koken:note>
-
-		No content found. Upload some in the Library.
-
-	</koken:note>
-
+  <koken:note>
+    No public albums found 
+  </koken:note>
 </koken:load>
-</div>
-
-<koken:include file="layouts/footer.html" />
+</body>
+</html>

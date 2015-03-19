@@ -40,6 +40,5 @@
     No album data found 
   </koken:note>
 </koken:load>
-<koken:include file="inc/components/footer.html" />
 </body>
 </html>

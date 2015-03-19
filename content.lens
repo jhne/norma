@@ -22,6 +22,5 @@
     No image or video found 
   </koken:note>
 </koken:load>
-<koken:include file="inc/components/footer.html" />
 </body>
 </html>

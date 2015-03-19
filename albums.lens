@@ -4,7 +4,7 @@
     <ul class="grid">
       <koken:loop>
         <li>
-          <koken:link>
+          <koken:link  title="View {{ album.title }}">
               <koken:img crop="adaptive" />
               <div>
                 <h3>{{ album.title }} </h3>
@@ -19,6 +19,5 @@
     </koken:note>
   </koken:load>
 </main>
-<koken:include file="inc/components/footer.html" />
 </body>
 </html>

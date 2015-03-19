@@ -1,56 +1,23 @@
 <koken:include file="inc/components/header.html" />
 <div class="page-content">
-<koken:load limit="10">
-
-<koken:variable name="list" value="true" />
-
-<header class="content">
-
-	<span class="wrap first">
-
-		<koken:breadcrumbs separator="/" />
-
-	</span>
-
-</header>
-
-<br>
-
-<div id="twocol">
-
-	<div class="mcol">
-
-		<koken:loop>
-
-			<koken:include file="layouts/article.html" />
-
-		</koken:loop>
-
-	</div>
-
-	<div class="rcol">
-
-		<aside>
-
-			<koken:include file="layouts/essays-aside.html" />
-
-		</aside>
-
-	</div>
-
+  <koken:load>
+      <koken:loop>
+        <article class="entry">
+          <p class="essay-time">
+            <koken:time />
+          </p>
+            <koken:link>
+            <h2> 
+              {{ essay.title }} 
+            </h2>
+            </koken:link>
+          </article>
+      </koken:loop>
+  <koken:else>
+    <koken:note>
+      No published essays found 
+    </koken:note>
+  </koken:load>
 </div>
-
-<koken:include file="layouts/pagination.html" />
-
-<koken:else>
-
-	<koken:note>
-
-		No essays found. Write some in Text.
-
-	</koken:note>
-
-</koken:load>
-</div>
-
-<koken:include file="layouts/footer.html" />
+</body>
+</html>

@@ -1,40 +1,60 @@
 <koken:include file="inc/components/header.html" />
-<div class="page-content">
 <koken:load>
-  <koken:breadcrumbs />
-  <h1>
     <koken:if data="archive.type" equals="date">
-      All albums from {{ archive.title }}
+      <article class="top-section">
+      <p class="album-name">{{ archive.title }}</p> 
+      </article>
+      <ul class="grid">
+      <koken:loop>
+        <li>
+          <koken:link  title="View {{ album.title }}">
+              <koken:img crop="adaptive" />
+              <div>
+                <h3>{{ album.title }} </h3>
+              </div>
+          </koken:link>
+        </li>
+        </koken:loop>
+      </ul>
     </koken:if>
     <koken:if data="archive.type" equals="tag">
-      All albums assigned the {{ archive.type.singular }} #{{ archive.title }}
+      <article class="top-section">
+      <p class="album-name">{{ archive.type.singular }} #{{ archive.title }}</p> 
+      </article>
+      <ul class="grid">
+      <koken:loop>
+        <li>
+          <koken:link  title="View {{ album.title }}">
+              <koken:img crop="adaptive" />
+              <div>
+                <h3>{{ album.title }} </h3>
+              </div>
+          </koken:link>
+        </li>
+        </koken:loop>
+      </ul>
     </koken:if> 
     <koken:if data="archive.type" equals="category">
-      All albums assigned in the {{ archive.type.singular }} {{ archive.title }}
-    </koken:if>
-  </h1>
-    <ol class="grid">
-    <koken:loop>
-      <li>
-        <h2>
-          <koken:link>
-            {{ album.title }}
+      <article class="top-section">
+      <p class="album-name">{{ archive.type.singular }} {{ archive.title }}</p> 
+      </article>
+      <ul class="grid">
+      <koken:loop>
+        <li>
+          <koken:link  title="View {{ album.title }}">
+              <koken:img crop="adaptive" />
+              <div>
+                <h3>{{ album.title }} </h3>
+              </div>
           </koken:link>
-        </h2> 
-        <koken:link>
-          <koken:img size="3:2" />
-        </koken:link>
-      </li>
-    </koken:loop>
-  </ol>
+        </li>
+        </koken:loop>
+      </ul>
+    </koken:if>
 <koken:else>
   <koken:note>
     No public albums found 
   </koken:note>
 </koken:load>
-</div>
-<footer>
-  {{ site.copyright }} 
-</footer>
 </body>
 </html>
