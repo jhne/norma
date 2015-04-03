@@ -8,10 +8,10 @@
   </koken:featured_image>
   <article class="entry">
     <p class="essay-time"><koken:time /></p>
-    <h2 class="page-name"> 
+    <h1 class="page-name"> 
       {{ essay.title }} 
     </h2> 
-    {{ essay.content paragraphs="true" }} 
+    {{ essay.content }} 
   </article>
 <koken:include file="inc/components/share.html" />
 <div class="disquis">

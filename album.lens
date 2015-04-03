@@ -13,7 +13,7 @@
     </koken:categories>
 
     <koken:tags>
-    <span class="tags"> /  Tagged 
+    <span class="tags">Tagged 
       <koken:loop separator=", ">
         <koken:link>
           {{ tag.title }}

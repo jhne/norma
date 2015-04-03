@@ -50,7 +50,7 @@ p a:hover {
 	z-index:1;
 }
 
-.sitename {
+#sitename {
 	color:#fff;
 	text-transform:uppercase;
 	float:left;
@@ -428,11 +428,6 @@ footer {
 	font-family: 'Merriweather', serif;
 }
 
-.entry blockquote:before, 
-.entry blockquote:after {
-	content:'"';
-}
-
 .entry:first-of-type {
 	margin-top:0;
 }
@@ -506,7 +501,7 @@ footer {
 	padding:0 20px 0 20px;
 }
 
-.entry h2, 
+.entry h1, 
 .album-name, 
 .exif h1, 
 .page-name, 
@@ -520,9 +515,9 @@ footer {
 	line-height:1.5em;
 }
 
-.k-lens-essays h2, 
-.k-lens-essay h2, 
-.list h2 {
+.k-lens-essays h1, 
+.k-lens-essay h1, 
+.list h1 {
 	text-transform:capitalize;
 	letter-spacing:0;
 }
@@ -583,15 +578,34 @@ footer {
 	font-family: 'Merriweather', serif;
 }
 
-.entry p {
+.entry ol li, .entry ul li {
+	font-family: 'Merriweather', serif;
+	color:#444;
+}
+
+.entry ol, .entry li {
+	line-height:1.5em;
+}
+
+.entry h1, .entry h2, .entry h3, .entry h4, .entry p, .entry ol, .entry ul {
+	padding:0 50px 0 50px;
 	max-width:750px;
 	margin:0 auto;
-	padding:0 50px 0 50px;
 	margin-top:15px;
 }
 
 .entry h2 {
-	padding:0 50px 0 50px;
+	font-size:2em;
+	font-weight:700;
+}
+
+.entry h3 {
+	font-size:1.6em;
+}
+
+.entry h4 {
+	font-size:1.4em;
+	color:#aaa;
 }
 
 .album-desc, .album-name {
@@ -698,6 +712,10 @@ footer {
 	letter-spacing:1px;
 }
 
+.tags:before {
+	content:" / "
+}
+
 @media screen and (max-width: 1190px) {
     .grid li {
         width: 33.33333333%; 
@@ -711,6 +729,28 @@ footer {
         width: 50%; 
         width: -webkit-calc(100% / 2);
         width: calc(100% / 2);
+    }
+
+    .timeline-time {
+    	font-size:1.1em;
+    }
+
+    .k-lens-timeline h3 {
+    	font-size:1.5em;
+    }
+
+    .k-lens-album .time {
+    	font-size:1em;
+    }
+
+    .k-lens-album .tags {
+    	display:block;
+    	width:100%;
+    	text-align:center;
+    }
+
+    .k-lens-album .tags:before {
+    	content:"";
     }
 }
  
