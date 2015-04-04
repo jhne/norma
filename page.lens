@@ -1,15 +1,17 @@
 <koken:include file="inc/components/header.html" />
+<div class="page-content">
     <koken:load>
-      <div class="page-content">
-        <h1 class="page-name">{{ page.title }}</h1>
-        {{ page.content }}
-      </article>
+      <article class="entry">
+      <h1 id="page-name"> 
+      {{ page.title }} 
+    </h1> 
+    {{ page.content }} 
+  </article>
     <koken:else>
      <koken:note>
        No page found
       </koken:note>
     </koken:load>
     </div>
-  <koken:include file="inc/components/footer.html" />
   </body>
 </html>

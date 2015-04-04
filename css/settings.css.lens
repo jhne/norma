@@ -490,7 +490,8 @@ footer {
 }
 
 .k-lens-essay .page-content, 
-.k-lens-tags .page-content {
+.k-lens-tags .page-content,
+.k-lens-page .page-content {
 	padding-top:0;
 }
 
@@ -569,7 +570,8 @@ footer {
 .entry p, 
 .main-p, 
 .exif p, 
-.list p {
+.list p,
+form label {
 	line-height:1.7em;
 	font-size:1.17em;
 	letter-spacing:0.01rem;
@@ -714,6 +716,68 @@ footer {
 
 .tags:before {
 	content:" / "
+}
+
+.k-lens-page #page-name {
+	padding:70px 20px 15px 20px;
+}
+
+.entry h1 {
+	text-transform:capitalize;
+}
+
+form {
+	max-width:750px;
+	margin:0 auto;
+	padding:0 20px 0 20px;
+}
+
+form fieldset {
+	margin-top:20px;
+}
+
+form input, form textarea {
+	width:100%;
+	font-size:1.17em;
+	padding:10px;
+	border:0;
+	background:#f0f0f0;
+	color:#000;
+}
+
+form input:focus, form textarea:focus {
+	outline:0;
+	background:#000;
+	color:#fff;
+}
+
+form label {
+	display:block;
+}
+
+form .k-contact-form-checkbox-field label {
+	display:inline;
+}
+
+form button {
+	border:0;
+	background:#000;
+	border-radius:3px;
+	padding:20px;
+	font-size:1.17em;
+	color:#fff;
+	cursor:pointer;
+}
+
+form button:hover {
+	background:#333;
+}
+
+.k-contact-form-required-field label:after {
+	content:"*";
+	font-size:.7em;
+	margin-left:10px;
+	padding-top:20px;
 }
 
 @media screen and (max-width: 1190px) {
