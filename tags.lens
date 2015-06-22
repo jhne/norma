@@ -1,8 +1,9 @@
 <koken:include file="inc/components/header.html" />
+<main role="main">
 <article class="top-section">
-	<h1 class="page-name">Browse by tags...</h1>
+	<h1 class="page-name">Browse by {{ labels.tag.plural }}...</h1>
 </article>
-<koken:load>
+<koken:load limit="18" infinite="true">
 	<ul class="grid">
     	<koken:loop>
     		<koken:link title="View everything in {{ tag.title }}">
@@ -18,3 +19,6 @@
 <koken:else>
 	No tags found.
 </koken:load>
+</main>
+</body>
+</html>

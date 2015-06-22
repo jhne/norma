@@ -1,4 +1,5 @@
 <koken:include file="inc/components/header.html" />
+<main role="main">
 <koken:load>
 	<article class="top-section">
     <p class="time"><koken:time />
@@ -23,7 +24,7 @@
     </koken:tags>
     </p>
 	  <p class="album-name">{{ album.title }} </p> 
-	  <p class="album-desc">{{ album.description }} </p>
+	  <p class="album-desc"> {{ album.description }} </p>
 	 </article>
   <ul class="grid">
     <koken:loop>
@@ -40,5 +41,6 @@
     No album data found 
   </koken:note>
 </koken:load>
+</main>
 </body>
 </html>

@@ -1,5 +1,6 @@
 <koken:include file="inc/components/header.html" />
-    <koken:load>
+<main role="main">
+    <koken:load limit="18" infinite="true">
       <ol class="grid">
         <koken:loop>
           <li>
@@ -14,6 +15,7 @@
         No images or videos found
       </koken:note>
     </koken:load>
+    </main>
     <footer>
       {{ site.copyright }}
     </footer>

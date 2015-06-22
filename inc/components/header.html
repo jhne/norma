@@ -1,24 +1,40 @@
 <!DOCTYPE html>
-<!-- design & development by www.jhne.me -->
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <koken:meta />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <koken:title />
-    <koken:settings />
-    <koken:asset file="inc/main.js" />
-  </head>
-  <body>
-    <koken:if data="settings.site_title_type" equals="text">
-        <koken:link to="front" title="{{ labels.home.singular }}"><h1 id="sitename">{{ site.title }}</h1></koken:link>
-    <koken:else>
-        <koken:link to="front" title="{{ labels.home.singular }}"><img src="{{ settings.site_title_img_url }}" alt="{{ site.title }}" id="logo"></koken:link>
+    <!-- 
+    Design & development by www.jhne.me 
+    -->
+        <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <koken:meta />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <koken:title />
+        <koken:settings />
+        <koken:asset file="inc/main.js" />
+    </head>
+    
+    <koken:if data="settings.menu_type" equals="expanded">
+        <body id="regular" class="expanded">
     </koken:if>
-	<div class="menu">
-		<a href="#" class="show">☰</a>
-	    <nav>
-	    	<koken:navigation />
-	    </nav>
-    </div>
-    </div>
+
+    <koken:if data="settings.menu_type" equals="sidebar">
+        <body id="sidebar">
+    </koken:if>
+
+    <koken:if data="settings.menu_type" equals="regular">
+        <body id="regular">
+    </koken:if>
+
+        <koken:if data="settings.site_title_type" equals="text">
+            <koken:link to="front" title="{{ labels.home.singular }}"><h1 id="sitename">{{ site.title }}</h1></koken:link>
+        <koken:else>
+            <koken:link to="front" title="{{ labels.home.singular }}"><img src="{{ settings.site_title_img_url }}" alt="{{ site.title }}" id="logo"></koken:link>
+        </koken:if>
+    	<div class="menu">
+    		<a href="#" class="show">☰</a>
+    	    <nav>
+    	    	<koken:navigation />
+    	    </nav>
+        </div>
+         <koken:if data="settings.menu_type" equals="sidebar">
+            <div id="hover"></div>
+        </koken:if>

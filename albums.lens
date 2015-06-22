@@ -1,6 +1,6 @@
 <koken:include file="inc/components/header.html" />
 <main role="main">
-  <koken:load>
+  <koken:load limit="18" infinite="true">
     <ul class="grid">
       <koken:loop>
         <li>

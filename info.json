@@ -37,6 +37,22 @@
 	               }
 				}
 			}
+		},
+
+		"Navigation": {
+			"icon":"layout",
+			"settings": {
+				"menu_type": {
+					"label": "Type",
+					"type": "select",
+					"options": [
+						{ "label": "Regular", "value": "regular" },
+						{ "label": "Regular Expanded", "value": "expanded" },
+						{ "label": "Sidebar", "value": "sidebar" }
+					],
+					"value": "regular"
+				}
+			}
 		}
 	}
 }

@@ -1,4 +1,5 @@
 <koken:include file="inc/components/header.html" />
+<main role="main">
     <koken:load source="featured_albums">
       <div id="slideshow">
         <koken:pulse autostart="true" width="100%" height="100%" crop="fill" jsvar="pulse" loop="true" source="featured_albums" next=".sldshw-arrow-right" previous=".sldshw-arrow-left" link_to="album" />
@@ -8,6 +9,7 @@
             <koken:load source="featured_albums"><li class="amount-check">{{ count }}</li></koken:load>
           </ul>
     </koken:load>
+    </main>
     <script>
       pulse.on( 'transitionstart', function(e) {
         var data = e.data.parent;

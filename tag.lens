@@ -1,6 +1,6 @@
 <koken:include file="inc/components/header.html" />
 <main role="main">
-<koken:load>
+<koken:load limit="18" infinite="true">
   <article class="top-section">
     <h1 class="page-name">Browsing {{ tag.title }}</h1>
   </article>

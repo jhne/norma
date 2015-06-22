@@ -1,5 +1,6 @@
 <koken:include file="inc/components/header.html" />
-<koken:load>
+<main role="main">
+<koken:load limit="18" infinite="true">
   <koken:content_image>
     <koken:img />
   </koken:content_image>
@@ -22,5 +23,6 @@
     No image or video found 
   </koken:note>
 </koken:load>
+</main>
 </body>
 </html>

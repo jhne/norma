@@ -68,33 +68,37 @@ p a:hover {
 	text-align:center;
 }
 
+#sidebar {
+	overflow-x:hidden;
+}
+
 #logo {
 	position:absolute;
 	margin:20px;
 	z-index:99;
 }
 
-nav ul li {
+#regular nav ul li {
 	display: inline;
 	list-style-type: none;
 	margin-left:-1px;
 }
 
-nav {
+#regular nav {
 	float:right;
 	color:#aaa;
 	font-size:.8em;
 }
 
-nav li a {
+#regular nav li a {
 	display:none;
 }
 
-.k-lens-index nav a {
+#regular .k-lens-index nav a {
 	display:inline-block;
 }
 
-nav a {
+#regular nav a {
 	text-transform:uppercase;
 	padding:15px;
 	font-weight:bold;
@@ -103,24 +107,25 @@ nav a {
 	border-left:1px solid #333;
 }
 
-nav a:hover {
+#regular nav a:hover {
 	color:#fff;
 	border-color:#000;
 	background:#333;
 }
 
-nav ul li:first-of-type a {
+#regular nav ul li:first-of-type a {
 	border:none;
 }
 
-nav .k-nav-current {
+#regular nav .k-nav-current {
 	border-color:#000;
 	background:#333;
 	color:#fff;
 	display:inline-block;
+	white-space: nowrap;
 }
 
-nav.mobile ul {
+#regular nav.mobile ul {
 	width:100%;
 	background:#000;
 	position:fixed;
@@ -132,11 +137,11 @@ nav.mobile ul {
 	display:none;
 }
 
-nav.mobile ul li {
+#regular nav.mobile ul li {
 	margin:0 auto;
 }
 
-nav.mobile ul li a {
+#regular nav.mobile ul li a {
 	display:block !important;
 	width:auto;
 	border:0;
@@ -149,27 +154,27 @@ nav.mobile ul li a {
 	border-bottom:1px solid #222;
 }
 
-nav.mobile ul li a:hover {
+#regular nav.mobile ul li a:hover {
 	background:#222;
 }
 
-nav.mobile .k-nav-current {
+#regular nav.mobile .k-nav-current {
 	background:#222 !important;
 	color:#fff !important;
 }
 
-.show.mobileOpen {
+#regular .show.mobileOpen {
 	border:0;
 }
 
-.menu {
+#regular .menu {
 	position:fixed;
 	z-index:9999;
 	margin:20px;
 	right:0;
 }
 
-.show {
+#regular .show {
 	height:48px;
 	width:48px;
 	display:block;
@@ -182,16 +187,85 @@ nav.mobile .k-nav-current {
 	float:right;
 }
 
-.show-toggled {
+#regular .show-toggled {
 	background:#000 !important;
 	color:#fff !important;
 	border-color:#333 !important;
 }
 
-.show:hover {
+#regular .show:hover {
 	color:#fff;
 	border-color:#222;
 	background:#333;
+}
+
+#regular.expanded .show {
+	display:none;
+}
+
+#regular.expanded nav li a {
+	display:inline;
+}
+
+#regular.expanded nav {
+	margin-top:15px;
+}
+
+main {
+	z-index:11;
+	display:block;
+	width:100%;
+	height:100%;
+	z-index:98;
+	position:relative;
+	background:#fff;
+}
+
+#sidebar .menu {
+	left:0;
+	right:auto;
+	margin:0;
+	width:200px;
+	background:#181818;
+	position:fixed;
+	z-index:1;
+	height:100%;
+}
+
+#sidebar #hover {
+	height:100%;
+	position:fixed;
+	z-index:99;
+	width:70px;
+}
+
+#sidebar #menu.offset {
+	z-index:999;
+}
+
+#sidebar nav ul {
+	list-style-type:none;
+}
+
+#sidebar nav ul li:first-of-type {
+	border-top:1px solid #222;
+}
+
+#sidebar nav ul li a {
+	display:block;
+	background:none;
+	color:#fff;
+	padding:20px 0 20px 20px;
+	border-bottom:1px solid #222;
+}
+
+#sidebar .k-nav-current {
+	background:#222;
+	color:#fff;
+}
+
+#sidebar .show {
+	display:none;
 }
 
 .disquis {
@@ -816,6 +890,11 @@ form button:hover {
     .k-lens-album .tags:before {
     	content:"";
     }
+
+    #sidebar .show {
+    	display:block;
+    	z-index:99;
+    }
 }
  
 @media screen and (max-width: 540px) {
@@ -834,6 +913,147 @@ form button:hover {
 		font-size:2em;
 	}
 	
+}
+
+@-webkit-keyframes offset {
+0% {
+margin-left:0;
+display:block;
+}
+100% {
+margin-left:200px;
+}
+}
+@keyframes offset {
+0% {
+margin-left:0;
+display:block;
+}
+100% {
+margin-left:200px;
+}
+}
+#sidebar .offset {
+-webkit-animation-name: offset;
+-webkit-animation-duration: 200ms;
+-webkit-animation-timing-function: ease-out;
+-webkit-animation-iteration-count: 1;
+-webkit-animation-direction: normal;
+-webkit-animation-delay: 0;
+-webkit-animation-play-state: running;
+-webkit-animation-fill-mode: forwards;
+animation-name: offset;
+animation-duration: 200ms;
+animation-timing-function: ease-out;
+animation-iteration-count: 1;
+animation-direction: normal;
+animation-delay: 0;
+animation-play-state: running;
+animation-fill-mode: forwards;
+}
+#sidebar main {
+-webkit-animation-name: nooffset;
+-webkit-animation-duration: 200ms;
+-webkit-animation-timing-function: ease-out;
+-webkit-animation-iteration-count: 1;
+-webkit-animation-direction: normal;
+-webkit-animation-delay: 0;
+-webkit-animation-play-state: running;
+-webkit-animation-fill-mode: forwards;
+animation-name: nooffset;
+animation-duration: 200ms;
+animation-timing-function: ease-out;
+animation-iteration-count: 1;
+animation-direction: normal;
+animation-delay: 0;
+animation-play-state: running;
+animation-fill-mode: forwards;
+}
+@-webkit-keyframes nooffset {
+0% {
+margin-left:200px;
+}
+100% {
+margin-left:0;
+}
+}
+@keyframes nooffset {
+0% {
+margin-left:200px;
+}
+100% {
+margin-left:0;
+}
+}
+
+#sidebar #sitename.nameoffset {
+-webkit-animation-name: nameoffset;
+-webkit-animation-duration: 200ms;
+-webkit-animation-timing-function: ease-out;
+-webkit-animation-iteration-count: 1;
+-webkit-animation-direction: normal;
+-webkit-animation-delay: 0;
+-webkit-animation-play-state: running;
+-webkit-animation-fill-mode: forwards;
+animation-name: nameoffset;
+animation-duration: 200ms;
+animation-timing-function: ease-out;
+animation-iteration-count: 1;
+animation-direction: normal;
+animation-delay: 0;
+animation-play-state: running;
+animation-fill-mode: forwards;
+}
+@-webkit-keyframes nameoffset {
+0% {
+margin-left:20px;
+}
+100% {
+margin-left:220px;
+}
+}
+@keyframes nameoffset {
+0% {
+margin-left:20px;
+}
+100% {
+margin-left:220px;
+}
+}
+
+#sidebar #sitename {
+-webkit-animation-name: namenooffset;
+-webkit-animation-duration: 200ms;
+-webkit-animation-timing-function: ease-out;
+-webkit-animation-iteration-count: 1;
+-webkit-animation-direction: normal;
+-webkit-animation-delay: 0;
+-webkit-animation-play-state: running;
+-webkit-animation-fill-mode: forwards;
+animation-name: namenooffset;
+animation-duration: 200ms;
+animation-timing-function: ease-out;
+animation-iteration-count: 1;
+animation-direction: normal;
+animation-delay: 0;
+animation-play-state: running;
+animation-fill-mode: forwards;
+}
+@-webkit-keyframes namenooffset {
+0% {
+margin-left:200px;
+}
+100% {
+margin-left:20px;
+}
+}
+@keyframes namenooffset {
+0% {
+margin-left:200px;
+}
+100% {
+margin-left:20px;
+}
 }
 
 

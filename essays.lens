@@ -1,6 +1,7 @@
 <koken:include file="inc/components/header.html" />
+<main role="main">
 <div class="page-content">
-  <koken:load>
+  <koken:load limit="18" infinite="true">
       <koken:loop>
         <article class="entry">
           <p class="essay-time">
@@ -19,5 +20,6 @@
     </koken:note>
   </koken:load>
 </div>
+</main>
 </body>
 </html>

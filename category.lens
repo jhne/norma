@@ -1,17 +1,27 @@
 <koken:include file="inc/components/header.html" />
 <main role="main">
-<koken:load>
+  <koken:load>
   <article class="top-section">
     <h1 class="page-name">Browsing {{ category.title }}</h1>
   </article>
     <ul class="grid">
-      <koken:loop>
-        <li>
-          <koken:link>
-            <koken:img crop="adaptive"/>
-          </koken:link>
+    <koken:event>
+        <koken:event_content>
+          <li>
+            <koken:event_album>
+              <koken:link>
+                <koken:img crop="adaptive"/>
+              </koken:link>
+            </koken:event_album>
+            <koken:event_content>
+              <!-- Rendered if a new public image/video is uploaded -->
+            </koken:event_content>
+            <koken:event_essay>
+              <!-- Rendered if a new essay is published -->
+            </koken:event_essay>
         </li>
-      </koken:loop>
+        <koken:event_content>
+      <koken:event>
     </ul>
   <koken:else>
     <koken:note>
