@@ -32,7 +32,7 @@ $(document).ready(function() {
     $("#hover").mouseenter(function() {
         var main = $('main');
         var area = $('#hover');
-        var name = $('#sitename')
+        var name = $('#sitename, #logo')
         if (!main.hasClass('offset')) {
             main.addClass('offset');
             area.addClass('offset');
@@ -44,5 +44,6 @@ $(document).ready(function() {
 		$('main').removeClass('offset');
 		$('#hover').removeClass('offset');
 		$('#sitename').removeClass('nameoffset');
+		$('#logo').removeClass('nameoffset');
 	});
 });
