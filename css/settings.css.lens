@@ -986,7 +986,8 @@ margin-left:0;
 }
 }
 
-#sidebar #sitename.nameoffset {
+#sidebar #sitename.nameoffset,
+#sidebar #logo.nameoffset {
 -webkit-animation-name: nameoffset;
 -webkit-animation-duration: 200ms;
 -webkit-animation-timing-function: ease-out;
@@ -1021,7 +1022,7 @@ margin-left:220px;
 }
 }
 
-#sidebar #sitename {
+#sidebar #sitename #logo {
 -webkit-animation-name: namenooffset;
 -webkit-animation-duration: 200ms;
 -webkit-animation-timing-function: ease-out;
