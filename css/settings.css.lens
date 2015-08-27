@@ -288,7 +288,7 @@ main {
     overflow: hidden;
     width: 33.333333%; /* Fallback */
     width: -webkit-calc(100% / 3);
-    width: calc(100% / 3);
+    max-width: calc(100% / 3);
 }
  
 .grid li a,
